@@ -5,3 +5,6 @@ function make_shirt(size: string, message: string){
 
 // Call the function
 make_shirt("Medium", "Hello, World!");
+
+
+export{}

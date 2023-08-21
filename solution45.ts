@@ -4,7 +4,7 @@ interface Car {
     [key: string]: any;
 }
 
-function create_car(manufacturer: string, modelName: string, ...extras: [string, any][]): Car {
+function createCar(manufacturer: string, modelName: string, ...extras: [string, any][]): Car {
     const car: Car = { manufacturer, modelName };
 
     for (const [key, value] of extras) {
@@ -14,5 +14,6 @@ function create_car(manufacturer: string, modelName: string, ...extras: [string,
     return car;
 }
 
-const carInfo: Car = create_car("Toyota", "Camry", "color", "blue", "year", 2023);
+const carInfo: Car = createCar("Toyota", "Camry", ["color", "blue"], ["year", 2023], ["features", ["GPS", "Sunroof"]]);
 console.log(carInfo);
+
